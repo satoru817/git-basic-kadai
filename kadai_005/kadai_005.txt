@@ -1,0 +1,67 @@
+satoru@satoru-Neptune-series-i9:~/samurai$ mkdir git_challenge
+satoru@satoru-Neptune-series-i9:~/samurai$ cd git_challenge
+satoru@satoru-Neptune-series-i9:~/samurai/git_challenge$ touch hello_world.txt
+satoru@satoru-Neptune-series-i9:~/samurai/git_challenge$ git add hello_world.txt
+fatal: not a git repository (or any of the parent directories): .git
+satoru@satoru-Neptune-series-i9:~/samurai/git_challenge$ git init
+Initialized empty Git repository in /home/satoru/samurai/git_challenge/.git/
+satoru@satoru-Neptune-series-i9:~/samurai/git_challenge$ git add hello_world.txt
+satoru@satoru-Neptune-series-i9:~/samurai/git_challenge$ git diff
+satoru@satoru-Neptune-series-i9:~/samurai/git_challenge$ git commit
+Aborting commit due to empty commit message.
+satoru@satoru-Neptune-series-i9:~/samurai/git_challenge$ git commit -m hello_world.txt???
+[main (root-commit) 1e627b0] hello_world.txt???
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello_world.txt
+satoru@satoru-Neptune-series-i9:~/samurai/git_challenge$ git status
+???? main
+nothing to commit, working tree clean
+satoru@satoru-Neptune-series-i9:~/samurai/git_challenge$ git diff
+diff --git a/hello_world.txt b/hello_world.txt
+index 2889c67..ccca01d 100644
+--- a/hello_world.txt
++++ b/hello_world.txt
+@@ -1 +1,2 @@
+-Hello,world!
+\ No newline at end of file
++Hello,world!
++????????!
+\ No newline at end of file
+satoru@satoru-Neptune-series-i9:~/samurai/git_challenge$ git commit
+???? main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   hello_world.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+satoru@satoru-Neptune-series-i9:~/samurai/git_challenge$ git add hello_world.txt
+satoru@satoru-Neptune-series-i9:~/samurai/git_challenge$ git diff --staged
+diff --git a/hello_world.txt b/hello_world.txt
+index 2889c67..ccca01d 100644
+--- a/hello_world.txt
++++ b/hello_world.txt
+@@ -1 +1,2 @@
+-Hello,world!
+\ No newline at end of file
++Hello,world!
++????????!
+\ No newline at end of file
+satoru@satoru-Neptune-series-i9:~/samurai/git_challenge$ git commit
+Aborting commit due to empty commit message.
+^C
+satoru@satoru-Neptune-series-i9:~/samurai/git_challenge$ git commit -m ???????
+[main 20f3173] ???????
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+satoru@satoru-Neptune-series-i9:~/samurai/git_challenge$ git log
+commit 20f31731cb4be5a07602d39698c7e4d3f08851f0 (HEAD -> main)
+Author: satoru_kurita <rhodeus208@gmail.com>
+Date:   Thu Jun 27 10:15:35 2024 +0900
+
+    ???????
+
+commit 1e627b0cc4ecf76d94c98a86a614322bd8d919de
+Author: satoru_kurita <rhodeus208@gmail.com>
+Date:   Thu Jun 27 10:14:17 2024 +0900
+
+    hello_world.txt???
